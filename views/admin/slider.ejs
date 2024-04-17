@@ -1,0 +1,105 @@
+<%-include('nav')%>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+            <h3>Update Slider Video</h3>
+        </div>
+        <hr>
+        <div class="col-md-12 mt-3 bg-white p-3 shadow">
+           <form action="/admin/save_slider" method="post" enctype="multipart/form-data">
+            <div class="row justify-content-center">
+                <div class="col-md-6 mt-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            Heding
+                            <textarea class="form-control bg-white" rows="1" name="heding"><%=list[0].heding%></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            detail
+                            <textarea class="form-control" rows="1" name="detail"><%=list[0].detail%></textarea>
+                        </div>
+                        
+                        <div class="col-md-6 mt-4">
+                            Slider Video
+                            <input class="form-control bg-white" type="file" name="video">
+                        </div>
+                        <div class="col-md-6 mt-4">
+                            <button class="btn btn-primary mt-4 form-control">Update Slider Video</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                        <video autoplay muted loop width="100%" class="video_id" style="height: 100%;">
+                            <source src="/uploads/<%=list[0].video%>" type="video/mp4" class="w-100" >
+                            Your browser does not support the video tag.
+                    </div>
+                </div>
+               
+            </div>
+                
+           </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+            <h3>Update Cards</h3>
+        </div>
+        <hr>
+        <div class="col-md-12 mt-3 bg-white p-3 shadow">
+           <form action="/admin/save_card" method="post" enctype="multipart/form-data">
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    Card Logo
+                    <input required class="form-control bg-white" type="file" name="logo">
+                </div>
+                <div class="col-md-3">
+                    Number
+                    <input required type="number" class="form-control" name="card_number" placeholder="Enter card_number">
+                </div>
+                <div class="col-md-3">
+                    Detail
+                    <input required type="text" class="form-control" name="detail" placeholder="Enter detail">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-primary mt-4 form-control">Save Card</button>
+                </div>
+            </div>
+           </form>
+        </div>
+
+        <div class="col-12 mt-4 shadow table-responsive">
+            <table class="table table-hover">
+                <tr>
+                    <td>S/N</td>
+                    <td>Logo</td>
+                    <td>Card_number</td>
+                    <td>Detail</td>
+                    <td>action</td>
+                </tr>
+                <% list2.forEach((val,i)=>{ %>
+                <tr>
+                    <th class="pt-5"><%=i+1%></th>
+                    <th>
+                        <img src="/uploads/<%=val.logo%>" width="100px" alt="">
+                    </th>
+                    <th class="pt-5"><%=val.card_number%></th>
+                    <th class="pt-5"><%=val.detail%></th>
+                    <td class="pt-5">
+                        <a href="/admin/edit_card"><button class="btn btn-primary m-1"><i class="fa-solid fa-pen-to-square"></i></button></a>
+                        <a href="/admin/delete_card/<%=val.id%>" onclick="return confirm('Are You Sure')"><button class="btn btn-danger m-1"><i class="fa-solid text-white fa-trash"></i></button></a>
+                    </td>
+                </tr>
+                <% }) %>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<%-include('footer')%>

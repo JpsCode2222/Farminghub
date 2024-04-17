@@ -1,0 +1,137 @@
+<%-include('nav')%>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center text-white"
+                style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+                <h3>Section 2</h3>
+            </div>
+            <hr>
+            <% if(!list) {%>
+                </hr>
+                <div class="col-md-12 mt-3 bg-white p-3 shadow">
+                    <form action="/admin/save_project_page_sec2" method="post" enctype="multipart/form-data">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 mt-2 mb-3">
+                                Enter Back Heading <span class="text-danger">*</span>
+                                <input required type="text" class="form-control" name="bg_heading"
+                                    placeholder=" Back heading">
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Enter Heading <span class="text-danger">*</span>
+                                <input required type="text" class="form-control" name="heading" placeholder=" Heading">
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Enter Title <span class="text-danger">*</span>
+                                <input required type="text" class="form-control" name="title" placeholder=" Title">
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Select Image <span class="text-danger">*</span>
+                                <input required class="form-control bg-white" type="file" name="img">
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Enter Paragraph Heading <span class="text-danger">*</span>
+                                <input required type="text" class="form-control" name="para_heading"
+                                    placeholder=" Paragraph Heading">
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Enter Paragraph <span class="text-danger">*</span>
+                                <textarea required class="form-control" name="para" placeholder=" Paragraph"></textarea>
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Enter Point1 <span class="text-danger">*</span>
+                                <input required type="text" class="form-control" name="point1" placeholder=" point1">
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Enter Point2 <span class="text-danger">*</span>
+                                <input required type="text" class="form-control" name="point2" placeholder=" point2">
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Enter Point3 <span class="text-danger">*</span>
+                                <input required type="text" class="form-control" name="point3" placeholder=" point3">
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Enter Point4 <span class="text-danger">*</span>
+                                <input required type="text" class="form-control" name="point4" placeholder=" point4">
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <button class="btn btn-primary mt-4">Save Details</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <% }%>
+
+                    <% if(list) {%>
+                        </hr>
+                        <div class="col-md-12 mt-3 bg-white p-3 shadow">
+                            <form action="/admin/update_project_page_sec2" method="post" enctype="multipart/form-data">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 mt-2 mb-3">
+                                        Enter Back Heading
+                                        <input type="text" class="form-control" value="<%=list.bg_heading%>"
+                                            name="bg_heading" placeholder=" Back heading">
+                                    </div>
+                                    <div class="col-md-6 mt-2 mb-3">
+                                        Enter Heading
+                                        <input type="text" class="form-control" value="<%=list.heading%>" name="heading"
+                                            placeholder=" Heading">
+                                        <input type="hidden" class="form-control" value="<%=list.id%>" name="id">
+                                    </div>
+                                    <div class="col-md-6 mt-2 mb-3">
+                                        Enter Title
+                                        <input type="text" class="form-control" value="<%=list.title%>" name="title"
+                                            placeholder=" Title">
+                                    </div>
+                                    <div class="col-md-3 mt-2 mb-3">
+                                        Select Image
+                                        <input class="form-control bg-white" type="file" name="img">
+                                    </div>
+                                    <div class="col-md-3 mt-2 mb-3">
+                                        <img src="/uploads/<%=list.img%>" class="h-100 w-100" alt="">
+                                    </div>
+                                    <div class="col-md-6 mt-2 mb-3">
+                                        Enter Paragraph Heading
+                                        <textarea type="text" class="form-control" value="<%=list.point1%>"
+                                            name="para_heading"
+                                            placeholder=" Paragraph Heading">"<%=list.para_heading%></textarea>
+                                    </div>
+                                    <div class="col-md-6 mt-2 mb-3">
+                                        Enter Paragraph
+                                        <textarea class="form-control" name="para"
+                                            placeholder=" Paragraph">"<%=list.para%></textarea>
+                                    </div>
+                                    <div class="col-md-6 mt-2 mb-3">
+                                        Enter Point1
+                                        <input type="text" class="form-control" value="<%=list.point1%>" name="point1"
+                                            placeholder=" point1">
+                                    </div>
+                                    <div class="col-md-6 mt-2 mb-3">
+                                        Enter Point2
+                                        <input type="text" class="form-control" value="<%=list.point2%>" name="point2"
+                                            placeholder=" point2">
+                                    </div>
+                                    <div class="col-md-6 mt-2 mb-3">
+                                        Enter Point3
+                                        <input type="text" class="form-control" value="<%=list.point3%>" name="point3"
+                                            placeholder=" point3">
+                                    </div>
+                                    <div class="col-md-6 mt-2 mb-3">
+                                        Enter Point4
+                                        <input type="text" class="form-control" value="<%=list.point4%>" name="point4"
+                                            placeholder=" point4">
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <button class="btn btn-primary mt-4">Update Details</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <% }%>
+
+        </div>
+    </div>
+
+
+
+    <%-include('footer')%>

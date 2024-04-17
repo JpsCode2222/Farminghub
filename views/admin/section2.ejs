@@ -1,0 +1,98 @@
+<%-include('nav')%>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+            <h3>Update Section 2 Welcome</h3>
+        </div>
+        <hr>
+        <div class="col-md-11 mt-3 bg-white p-3 shadow">
+           <form action="/admin/save_section2" method="post" enctype="multipart/form-data">
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    Heading1
+                    <input class="form-control bg-white" type="text" name="heading1"  placeholder="Enter heading1">
+                </div>
+                <div class="col-md-3">
+                    heading2
+                    <input type="text" class="form-control" name="heading2" placeholder="Enter heading2">
+                </div>
+                <div class="col-md-3">
+                    Detail
+                    <input type="text" class="form-control" name="detail" placeholder="Enter detail">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-primary mt-4 form-control">Update Heding</button>
+                </div>
+            </div>
+           </form>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+            <h3>No insert/only Update table</h3>
+        </div>
+        <div class="col-md-11  mt-3 bg-white p-3 shadow">
+            <form action="/admin/save_sec2_img" method="post" enctype="multipart/form-data">
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        img 
+                        <input disabled required class="form-control bg-white" type="file" name="img">
+                    </div>
+                    <div class="col-md-3">
+                        img_heding
+                        <input disabled required type="text" class="form-control" name="img_heding" placeholder="Enter card_number">
+                    </div>
+                    <div class="col-md-3">
+                        Detail
+                        <input disabled required type="text" class="form-control" name="detail" placeholder="Enter detail">
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary mt-4 form-control">Save img</button>
+                    </div>
+                </div>
+               </form>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+            <h3>Table img section 2</h3>
+        </div>
+
+
+        <div class="col-12 mt-4 shadow table-responsive">
+            <table class="table table-hover">
+                <tr>
+                    <td>S/N</td>
+                    <td>action</td>
+                    <td>img Heding</td>
+                    <td>Detail</td>
+                    <td>img</td>
+                </tr>
+                <% list.forEach((val,i)=>{ %>
+                <tr>
+                    <th class="pt-5"><%=i+1%></th>
+                    <td class="pt-5">
+                        <a href="/admin/edit_sec2_img/<%=val.id%>"><button class="btn btn-primary m-1"><i class="fa-solid fa-pen-to-square"></i></button></a>
+                        <a href="/admin/delete_sec2_img/<%=val.id%>" onclick="return confirm('Are You Sure')"><button class="btn btn-danger m-1"><i class="fa-solid text-white fa-trash"></i></button></a>
+                    </td>
+                    <th class="pt-5"><%=val.img_heding%></th>
+                    <th class="pt-5 w-50"><%=val.detail%></th>
+                    <th>
+                        <img src="/uploads/<%=val.img%>" width="100px" alt="">
+                    </th>
+                    
+                   
+                </tr>
+                <% }) %>
+            </table>
+        </div>
+        
+    </div>
+</div>
+
+<%-include('footer')%>

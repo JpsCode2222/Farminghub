@@ -1,0 +1,88 @@
+ @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+ 
+  
+  .img1 {
+    margin-left: 0rem;
+    width: 100%;
+    height: 80vh;
+    margin-top: 0rem;
+    filter:brightness(80%);
+    filter: brightness(40%);
+
+} 
+
+.img2{
+    margin-left: 0rem;
+    width: 100%;
+    height: 110vh;
+    margin-top: 0rem;
+    filter:brightness(80%);
+} 
+.text-overlay {
+    position: absolute;
+    top: 425%;
+    left: 50%;
+    margin-top:2rem;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(252, 246, 246);
+}
+#sub{
+    margin-right: 3rem;
+}
+.text-overlay1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-top:2rem;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(252, 246, 246);
+}
+
+
+
+.underline {
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+.h01{
+    font-size: 6rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: rgb(252, 186, 186);
+          font-family: "Marck Script", cursive;
+        font-weight: 400;
+        font-style: normal;
+      
+}
+ li{
+    border-right: none;
+ }
+ .list-group{
+line-height: 3rem;
+border: none;
+border-right: 1px solid rgb(185, 184, 184);
+ }
+
+ @media only screen and (max-width: 600px) {
+ 
+
+ .text-overlay {
+    position: absolute;
+    top: 1300%;
+    left: 50%;
+    margin-top:2rem;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(252, 246, 246);
+}
+
+#sub{
+    margin-right: 3rem;
+}
+
+ }

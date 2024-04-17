@@ -1,0 +1,42 @@
+<%-include('nav.ejs')%>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+                <h3>Edit About farm Section</h3>
+            </div>
+        </div>
+        <form action="/admin/save_about_farm" method="post" enctype="multipart/form-data" style="border: 1px solid rgba(128, 0, 128, 0.449);" class="p-md-5 mt-5">
+        <div class="row mt-md-5 " >
+            <div class="col-md-4">
+                Enter First Heading
+                <input type="text" class="form-control" name="heding1" value="<%=about_farm[0].first_heding%>">
+            </div>
+            <div class="col-md-4">
+                Enter Sub Heading
+                <input type="text" class="form-control" name="heding2" value="<%=about_farm[0].second_heading%>">
+            </div>
+            <div class="col-md-4">
+                Enter Discription
+                <input type="text" class="form-control" name="disc" value="<%=about_farm[0].discription%>">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                Enter Before Hover Image
+                <input type="file" class="form-control mb-4" name="before_hover">
+                <img src="/uploads/<%=about_farm[0].before_hover%>" alt="" width="330px">
+            </div>
+            <div class="col-md-6">
+                Enter After Hover Image
+                <input type="file" class="form-control mb-4" name="after_hover">
+                <img src="/uploads/<%=about_farm[0].ater_hover%>" alt="" width="320px">
+            </div>
+            <div class="col-md-12 mt-3">
+                <button class="btn btn-primary">Save Farm</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+<%-include('footer.ejs')%>

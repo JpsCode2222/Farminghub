@@ -1,0 +1,153 @@
+<%- include('navbar.ejs')%>
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+		integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kristi&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			scroll-behavior: smooth;
+		}
+
+		.style_font {
+			font-family: "Kristi", cursive;
+			font-style: normal;
+			font-size: 5rem;
+		}
+
+		.title_bg_banner_first {
+			min-height: 400px;
+			width: 100%;
+			background-size: 100% 100%;
+			background-color: rgba(18, 18, 18, 0.817);
+			background-repeat: no-repeat;
+		}
+
+		.title_bg_banner_second {
+			max-height: 100%;
+			min-height: 300px;
+			width: 100%;
+			background-size: 100% 100%;
+			background-color: rgba(18, 18, 18, 0.817);
+			background-repeat: no-repeat;
+		}
+
+		.bg_img_agri_card {
+			transition: all 0.3s ease-out !important;
+		}
+
+		.blue_background {
+			transition: all 0.3s ease-out !important;
+		}
+
+		.bg_img_agri_card:hover .blue_background {
+			height: 100%;
+			width: 100%;
+			margin: auto;
+			background-color: rgba(41, 254, 155, 0.381);
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			font-size: 40px;
+			transition: all 0.5s ease-out !important;
+		}
+
+		.card-body {
+			overflow: hidden !important;
+		}
+
+		.bg_img_agri_card:hover {
+			transform: scale(1.2);
+		}
+
+		.bg_img_agri_card:hover i {
+			display: block !important;
+		}
+
+		.fruit_img {
+			transition: all 0.5s;
+		}
+
+		.card {
+			transition: all 0.5s;
+		}
+
+		.card:hover .fruit_img {
+			transform: scale(1.04);
+		}
+
+		.card:hover {
+			box-shadow: 0.50px 0.50px 20px 0.50px rgba(115, 245, 45, 0.385);
+		}
+
+		@media (max-width:800px) {
+			.bg_img_agri_card_single {
+				height: 350px !important;
+			}
+
+			.title_bg_banner_second {
+				height: 350px !important;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<div class="container-fluid"style=" margin-top:-90px" >
+			<div class="row justify-content-center">
+				<div class="col-lg-12 p-0 text-center" data-aos="fade-down">
+					<div style="background-image: url(/uploads/<%=sec1.bg_img%>); height: 500px"
+						class="title_bg_banner_second d-flex flex-column align-item-center justify-content-center">
+						<div>
+							<p class="font-weight-bold style_font" style="color: yellow;" data-aos="fade-down">
+								<%=sec1.heading%>
+							</p>
+						</div>
+						<div class="" data-aos="fade-down">
+							<h3 class=" text-white"
+								style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" data-aos="fade-down">
+								<%=sec1.title%></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-10 justify-content-center" data-aos="fade-down">
+					<p class="mt-4 text-justify" style="text-align-last: center;font-size: 20px;text-align: center;"><%=sec1.para%></p>
+				</div>
+				<div class="col-lg-10 pb-4" data-aos="fade-down">
+					<div class="row">
+						<% for(var i=0;i<sec2.length;i++){%>
+                        <div class="col-lg-4 mt-4" data-aos="fade-down">
+                        <div class="card h-100" style="border-top-right-radius: 50px;" data-aos="fade-down">
+                            <div class="card-body p-0 justify-content-center d-flex align-item-center">
+                                <img class="h-75 w-75 fruit_img" src="/uploads/<%=sec2[i].img%>"
+                                    style="border-radius: 20px;" alt=""/>
+                            </div>
+                            <div class="card-footer text-center bg-white">
+                                <button class="btn btn-success"><%=sec2[i].name%></button>
+                            </div>
+                        </div>
+                    </div>
+                        <%}%>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<%- include('footer.ejs')%>

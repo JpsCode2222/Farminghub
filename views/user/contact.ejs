@@ -1,0 +1,263 @@
+<%-include('navbar')%>
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- bootstrap link css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <style>
+
+
+  </style>
+
+  <body>
+
+    <!-- <h1>Contact</h1> -->
+
+    <div class="image-container container-fluid p-0" data-aos="fade-down">
+      <div class="row">
+        <div class="col-12" data-aos="fade-down">
+          <img src="/uploads/<%=sec1[0].bg_img%>" width="100%" alt="Our Story Image" class="image1">
+          <div class="text-overlay">
+            <h1 class="h01" data-aos="fade-down">
+              <%=sec1[0].heading%>
+            </h1>
+            <button type="button" class="btn btn-light text-warning btn-lg m-2" data-aos="fade-down">
+              <%=sec1[0].btn1%>
+            </button>
+            <button type="button" class="btn btn-light  text-warning btn-lg" data-aos="fade-down">
+              <%=sec1[0].btn2%>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <br><br>
+    <br><br>
+
+
+
+
+    <div class="container-fluid" id="container2">
+
+      <div class="row card-group">
+        <% for(var i=0;i<sec2.length;i++){%>
+          <div class="col-md-4 col-sm-12 col-12" data-aos="fade-down">
+            <div class="cookieCard">
+              <div class="card-body">
+                <h5 class="cookieHeading" data-aos="fade-down">
+                  <%=sec2[i].heading%>
+                </h5>
+                <p class="cookieDescription" data-aos="fade-down">
+                  <%=sec2[i].details%>
+                </p>
+              </div>
+            </div>
+          </div>
+          <%}%>
+      </div>
+
+    </div>
+
+
+
+    <!-- Start Header form -->
+    <div class="text-center pt-5" data-aos="fade-down">
+      <img src="https://i.ibb.co/8cDgdFX/Logo.png" alt="network-logo" width="72" height="72" data-aos="fade-down"/>
+      <h5 class="text-warning" data-aos="fade-down">Contact us</h5>
+      <h2 data-aos="fade-down">Type us a word</h2>
+    </div>
+    <!-- End Header form -->
+
+    <div class="container shadow">
+      <!-- Start Card -->
+      <div class="card">
+        <!-- Start Card Body -->
+        <div class="card-body">
+          <!-- Start Form -->
+          <form id="bookingForm" data-aos="fade-down" action="/save_contact_us" method="post" class="needs-validation" novalidate
+            autocomplete="off">
+            <div class="row">
+            <!-- Start Input Name -->
+            <div class="col-md-6" data-aos="fade-down">
+              <div class="form-group" data-aos="fade-down">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" name="name" placeholder="Your name" required />
+                <small class="form-text text-muted">Please fill your name</small>
+              </div>
+            </div>
+            <!--end input name  -->
+            <!-- company name -->
+            <div class="col-md-6" data-aos="fade-down">
+              <div class="form-group">
+                <label for="inputName"> Company Name</label>
+                <input type="text" class="form-control" id="company" name="company" placeholder="Your name (Optional)"
+                  required />
+                <small class="form-text text-muted">Please fill your Company name</small>
+              </div>
+            </div>
+            <!-- End company Name -->
+
+            <!-- Start Input Email -->
+            <div class="col-md-6" data-aos="fade-down">
+              <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Enter email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+                <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+            </div>
+            <!-- End Input Email -->
+
+            <!-- Start Input Telephone -->
+            <div class="col-md-6" data-aos="fade-down">
+              <div class="form-group">
+                <label for="inputPhone">Phone</label>
+                <input type="tel" class="form-control" id="inputPhone" name="phone" placeholder="099xxxxxxx"
+                  pattern="\d{3}\d{3}\d{4}" required />
+                <small class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+              </div>
+            </div>
+            <!-- End Input Telephone -->
+
+            <!-- Start Input Remark -->
+            <div class="col-md-6" data-aos="fade-down">
+              <div class="form-group">
+                <label for="textAreaRemark">Message</label>
+                <textarea class="form-control" id="textAreaRemark" rows="2" name="message"
+                  placeholder="Tell us you want more..."></textarea>
+              </div>
+            </div>
+            <!-- End Input Remark -->
+
+            <!-- Start Submit Button -->
+            <div class="col-md-6 mt-5" data-aos="fade-down">
+              <button class="btn btn-primary col-lg-4 form-control" type="submit">Submit</button>
+            </div>
+            </div>
+            <!-- End Submit Button -->
+          </form>
+          <!-- End Form -->
+        </div>
+        <!-- End Card Body -->
+      </div>
+      <!-- End Card -->
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+    <!-- Start Scritp for Form -->
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+    <!-- End Scritp for Form -->
+    <script>// Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+              form.addEventListener(
+                "submit",
+                function (event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add("was-validated");
+                },
+                false
+              );
+            });
+          },
+          false
+        );
+      })();
+    </script>
+
+
+    <div class="image-container" id="container-3">
+      <img src="/uploads/<%=sec4[0].bg_img%>" alt="Our Story Image" class="img1">
+      <div class="text-overlay" style="margin-top: 21rem;">
+        <span class="font-weight-bold" style="font-size: 1.2rem; color:rgb(255, 188, 188)">
+          <%=sec4[0].title%>
+        </span>
+        <br><br>
+        <br>
+        <h1>
+          <%=sec4[0].heading%>
+        </h1>
+        <br>
+        <div class="form-group" style="  width: 170%;height:35vh;margin-top:2rem;margin-left:-3rem ">
+          <form action="/save_subscriber" method="post">
+            <input type="email" style="border:1px solid red;" class="form-control h-25" id="inputEmail" name="email"
+              placeholder="Enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+            <br> <button class="btn btn-outline-danger btn-lg text-light "> Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- bootstrap js link -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"></script>
+  </body>
+
+  </html>
+
+
+  <%-include('footer')%>

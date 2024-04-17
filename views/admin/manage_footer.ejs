@@ -1,0 +1,132 @@
+<%-include('nav.ejs')%>
+<div class="container-fluid">
+    
+<form action="/admin/save_footer" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-12 shadow mb-5">
+            <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+                <h3>Manage Footer</h3>
+            </div>
+        </div>
+        <div class="row mb-5">
+        <div class="col-md-3">
+            Select First Logo
+            <input type="file" name="logo1" class="form-control">
+        </div>
+        <div class="col-md-3">
+          <img src="/uploads/<%=footer[0].logo1%>" alt="" width="100%" class="p-5">
+        </div>
+        
+        <div class="col-md-3">
+            Select Second Logo
+            <input type="file" name="logo2" class="form-control">
+        </div>
+        <div class="col-md-3">
+            <img src="/uploads/<%=footer[0].logo2%>" alt="" width="100%" class="w-100 p-5">
+          </div>
+    </div>
+        <div class="col-md-3">
+            Address
+            <input type="text" name="address" id="" class="form-control" value="<%=footer[0].address%>">
+        </div>
+        <div class="col-md-3">
+            Email
+            <input type="email" name="email" id="" class="form-control" value="<%=footer[0].email%>">
+        </div>
+        <div class="col-md-3">
+            Number
+            <input type="number" name="number" id="" class="form-control" value="<%=footer[0].number%>">
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-primary mt-3">Save Footer Info</button>
+        </div>
+    </div>
+</form>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <form action="/admin/save_social_link" method="post" enctype="multipart/form-data">
+        <div class="col-md-12 shadow mb-5">
+            <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(194, 120, 211) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+                <h3>Manage Social Links</h3>
+            </div>
+        </div>
+        <div class="col-md mt-3">
+            Enter Facebook Link
+            <input type="url" name="facebook" id="" class="form-control" value="<%=social_link[0].facebook_link%>">
+        </div>
+        <div class="col-md mt-3">
+            Enter Twitter Link
+            <input type="url" name="twitter" id="" class="form-control" value="<%=social_link[0].twitter_link%>">
+        </div>
+        <div class="col-md mt-3">
+            Enter Instagram Link
+            <input type="url" name="instagram" id="" class="form-control" value="<%=social_link[0].insta_link%>">
+        </div>
+        <div class="col-md mt-3">
+            Enter Youtube Link
+            <input type="url" name="youtube" id="" class="form-control" value="<%=social_link[0].youtube%>">
+        </div>
+        <div class="row">
+        <div class="col-md mt-3">
+            Select Animated Logo
+            <input type="file" name="logo" id="" class="form-control">
+        </div>
+        <div class="col-md mt-3">
+            <img src="/uploads/<%=social_link[0].logo%>" alt="">
+        </div>
+    </div>
+        <div class="col-md mt-3">
+            <button class="btn btn-primary mt-3">Save Social Link</button>
+        </div>
+    </form>
+    </div>
+</div>
+<div class="container-fluid mt-5">
+    <div class="col-md-12 shadow mb-5">
+        <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(194, 120, 211) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+            <h3>Manage Links</h3>
+        </div>
+    </div>
+    <form action="/admin/save_link" method="post">
+    <div class="row">
+    <div class="col-md">
+        Enter Link Name*
+        <input type="text" name="link_name" class="form-control">
+    </div>
+    <div class="col-md">
+        Enter Url*
+        <input type="url" name="url" id="" class="form-control">
+    </div>
+    <div class="col-md">
+        <button class="btn btn-primary mt-4">Save Links</button>
+    </div>
+</div>
+</form>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover">
+                <tr>
+                    <th>Sn</th>
+                    <th>Link Name</th>
+                    <th>Url</th>
+                    <th>Action</th>
+                </tr>
+                <%for(var i=0;i<link.length;i++){%>
+                    <tr>
+                        <td><%=i+1%></td>
+                        <td><%=link[i].link_name%></td>
+                        <td><%=link[i].url%></td>
+                        <td>
+                            <a href="/admin/edit_link/<%=link[i].link_id%>"><button class="btn text-warning"><i class="fa fa-pencil"></i></button></a>
+                            <button class="btn " onclick="confirm('Are You Sure')"><a href="/admin/delete_link/<%=link[i].link_id%>"><i class="fa fa-trash text-danger"></i></a></button>
+                        </td>
+                    </tr>
+                <%}%>
+            </table>
+        </div>
+    </div>
+</div>
+<%-include('footer.ejs')%>

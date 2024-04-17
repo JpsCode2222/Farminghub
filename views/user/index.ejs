@@ -1,0 +1,371 @@
+<%-include("navbar.ejs")%>
+
+<body>
+      <section class="container-fluid" data-aos="fade-down">
+        <div class="row video_section">
+          <div class="col-md-12 video p-0">
+            <video autoplay muted loop width="100%" class="video_id">
+              <source src="/uploads/<%=slider[0].video%>" type="video/mp4" class="w-100" >
+              Your browser does not support the video tag.
+          </video>
+          </div>
+          <div class="col-md-12 video_child text-center">
+            <h1 class="vegetables"><%=slider[0].heding%></h1>
+            <h1 class="growing"><%=slider[0].detail%></h1>
+            <a href="/about">
+            <button class="video_child_btn">Explore More</button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid mt-5 mb-5 p-5" data-aos="fade-down">
+        <div class="row leaf_parent mb-5">
+            <div class="col-md-12 text-center ">
+                <h1 class="farms" data-aos="fade-down"><%=section2[0].heading1%></span></h1>
+                <h1 class="aws" data-aos="fade-down"><%=section2[0].heading2%></h1>
+                <p class="farms_p" data-aos="fade-down"><%=section2[0].detail%></p>
+            </div>
+            <div class="colmd-5 leaf">
+                <img src="https://webdesign-finder.com/seedone/wp-content/uploads/2022/05/Leaf-1.png" alt="">
+            </div>
+        </div>
+      </section>
+      <section class="container-fluid mt-md-5 cardss mb-5" data-aos="fade-down">
+        <div class="row">
+            <div class="col-md-4 mt-5">
+                <div class="card mt-md-5 pt-md-5 card_inner" data-aos="fade-right">
+                    <img src="/uploads/<%=sec2_img[0].img%>" alt="" class="d-block">
+                    <div class="card_most_inner text-center">
+                        <h1 class="text-white"><%=sec2_img[0].img_heding%></h1>
+                        <p><%=sec2_img[0].detail%></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5 pt-md-3 mb-3" data-aos="fade-up">
+                <div class="card card_inner">
+                    <img src="/uploads/<%=sec2_img[1].img%>" alt="" class="d-block">
+                    <div class="card_most_inner text-center">
+                        <h1 class="text-white"><%=sec2_img[1].img_heding%></h1>
+                        <p><%=sec2_img[1].detail%></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-md-0" data-aos="fade-down">
+                <div class="card card_inner">
+                    <img src="/uploads/<%=sec2_img[2].img%>" alt="" class="d-block">
+                    <div class="card_most_inner text-center">
+                        <h1 class="text-white"><%=sec2_img[2].img_heding%></h1>
+                        <p><%=sec2_img[2].detail%></p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+      </section>
+      <section class="container-fluid">
+        <div class="row mt-5 w-100">
+            <div class="col-md-5 ps-5" data-aos="fade-right">
+                <h6 class="about_farm mt-5 pt-5" data-aos="fade-right"><%=about_farm[0].first_heding%></h6>
+                <h1 class="about_page_h1" data-aos="fade-right"><%=about_farm[0].second_heading%>
+                </h1>
+                
+                <p class="text-secondary about_page_p"><%=about_farm[0].discription%></p>
+                <a href="/more_about_home"><button class="more_about_us">More About Us</button></a>
+
+            </div>
+            <div class="col-md-7 rel_img" data-aos="fade-down">
+              <img src="/uploads/<%=about_farm[0].before_hover%>" alt="" class="d-block w-100">
+              <div class="abs_img">
+                <img src="/uploads/<%=about_farm[0].ater_hover%>" alt="" class="d-block w-100">
+              </div>
+            </div>
+            <div class="col-md-12" data-aos="fade-down">
+                <div class="row mt-5 w-100 award_parent rel_img2">
+                    <div class="col-md-3 ms-2 ">
+                      <img src="/uploads/<%=achivement[0].first_img%>" alt="" class="d-block w-100">
+                    </div>
+                    <div class="abs_img2 col-md-3">
+                      <img src="/uploads/<%=achivement[0].third_img%>" alt="" class="loading_img d-block w-50">
+                      <img src="/uploads/<%=achivement[0].second_img%>" alt="" class="d-block w-100">
+                    </div>
+                    <div class="row awards">
+                      <div class="col-md-8 mt-5">
+                        <h5 class="text-danger" data-aos="fade-right"><%=achivement[0].tittle%></h5>
+                        <h3 class="leaders_of_agg" data-aos="fade-right"><%=achivement[0].leader_section%></h3>
+                        <p class="about_page_p leader_of_p" data-aos="fade-right"><%=achivement[0].more_disk%></p>
+                        <div class="row">
+                          <div class="col-md-3" data-aos="fade-right">
+                            <img src="/uploads/<%=achivement[0].achivement_logo%>" alt="" class="w-100">
+                          </div>
+                          <div class="col-md-4" data-aos="fade-right">
+                            <h3 class="award_count"><%=achivement[0].award_count%> +<br>
+                              <p>Award Win</p>
+                            </h3>
+                          </div>
+                          <div class="col-md-3" data-aos="fade-right">
+                            <img src="/uploads/<%=achivement[0].earth_logo%>" alt="" class="w-100">
+                          </div>
+                          <div class="col-md-1" data-aos="fade-right">
+                            <h3 class="award_count"><%=achivement[0].experiance%>+<br>
+                              <p>Experiance</p>
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            
+        </div>
+</section>
+<section class="container-fluid feedback_section" data-aos="fade-down">
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-black opacity-0 " aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="bg-black  opacity-0"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="bg-black  opacity-0"></button>
+    </div>
+
+    <div class="carousel-inner text-center">
+    <%for(var i=0;i<testimonial.length;i++){%>
+      <div class="carousel-item slider_img <%= i === 0 ? 'active' : '' %>">
+        <img src="/uploads/<%=testimonial[i].test_img%>" class="" alt="..." width="200px">
+        <p class="p-5 slider_para" data-aos="fade-right"><%=testimonial[i].text_disc%></p>
+        <h4 class="text-danger" data-aos="fade-right"><%=testimonial[i].test_name%></h4>
+      </div>
+      <%}%>
+     
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="col-md-2 feed_bacK_back_img">
+    <img src="https://webdesign-finder.com/seedone/wp-content/uploads/2022/05/Frame.png" alt="">
+  </div>
+</section>
+
+
+
+    <section class="container-fluid mt-5" data-aos="fade-down">
+      <div class="row mt-5">
+     <div class="col-md-6 ps-5 ">
+      <img src="https://webdesign-finder.com/seedone/wp-content/uploads/2022/05/Image-e1655238131831.png" alt="" class="w-75 d-block mt-5">
+    </div>
+    <div class="col-md-6">
+      <h6 class="contact_uss" data-aos="fade-down">Contact us</h6>
+      <h3 class="type_us_a" data-aos="fade-down">Type us a word</h3>
+      <form action="/admin/conatct_user" method="post" class="these_form" data-aos="fade-down">
+        <input type="text" name="Full_Name" placeholder="Full Name" class="form-control shadow-none">
+        <input type="text" name="Email_Address" placeholder="Email Address" class="form-control shadow-none">
+        <input type="text" name="Phone_Number" placeholder="Phone Number" class="form-control shadow-none">
+        <input type="text" name="Your_Message" placeholder="Your Message" class="form-control text_area shadow-none">
+        <button class="more_about_us">Send Message</button>
+      </form>
+    </div>
+      </div>
+    </section> 
+
+
+    <section class="team_section mt-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3 p-5" data-aos="fade-down">
+              <h3 class="about_farm">Our Faces</h3>
+              <h1 class="type_us_a ms-0">Meet Our Team</h1>
+              <h3 class="type_us_a ms-0">more passionate about their work</h3>
+          </div>
+          <%for(var i=0;i<teams.length;i++){%>
+          <div class="col-md-3" data-aos="fade-right">
+            <div class="card p-5 parent_card" data-aos="fade-right">
+              <img src="/uploads/<%=teams[i].img%>" alt="" class="w-100 d-block">
+              <div class="child_card p-5">
+                <ul class="child_icons text-white">
+                  <li><a href="<%=teams[i].insta_link%>"><i class="fa-brands fa-instagram text-white"></a></i>
+                </li>
+                <li><a href="<%=teams[i].whatsapp_link%>"><i class="fa-brands fa-whatsapp text-white"></i></a></li>
+                <li><a href="<%=teams[i].facebook_link%>"><i class="fa-brands fa-facebook text-white"></i></a></li>
+              </ul>
+              </div>
+            </div>
+          </div>
+          <%}%>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid subscribe_section" data-aos="fade-down">
+      <div class="row p-0">
+        <img src="https://images.unsplash.com/photo-1617137604218-1e464151eee8?q=80&w=1937&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="w-100 p-0 d-block nature_img">
+      </div>
+      <div class="subscribe_child" data-aos="fade-down">
+        <h5 class="subscribe_h5"  data-aos="fade-down">Sign Up For Free</h5>
+        <h1 class="newsletter" data-aos="fade-down">NewsLetter</h1>
+        <form action="/save_subscriber_home" method="post" data-aos="fade-down">
+        <input type="text" placeholder="Email Address" class="subscribe_input" name="email"><br>
+        <button class="more_about_us text-white" data-aos="fade-down">Subscribe</button>
+        </form>
+      </div>
+  </section>
+  
+  
+  <!-- footer section satrt  -->
+
+  <style>
+    /* Footer Dynamic */
+    .footer{
+      margin-top: 637px;
+    }
+    @media (max-width:667px) {
+      .footer{
+       margin-top: 190px;
+    }
+      }
+  </style>
+  <style type="text/css">
+  
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    .f1{
+    background-color: black;
+    padding-top: 100px;
+    
+    
+    }
+    .f1 p{
+    font-size: 22px;
+      color: var(--colorFont);
+     
+    }
+    .f2{
+    background-color: black;
+    padding-top: 100px;
+    }
+    .f3{
+    
+    background-color: black;
+    font-size: 20px;
+      color: var(--colorFont);
+      padding-top: 100px;
+    }
+    .f4{
+    background-color: black;
+    font-size: 20px;
+      color: var(--colorFont);
+      padding-top: 100px;
+    }
+    .f4 ul li{
+    list-style-type: none;
+    padding: 10px;
+    
+    font-size: 20px;
+    
+      color: var(--colorFont);
+    
+    }
+    .f4 i{
+    background-color:lightgreen;
+    
+    border-radius: 50px;
+    padding: 18px;
+    border-color: white;
+    
+    }
+    
+    .c1{
+    height: 200px;
+    margin-top: 40px;
+    padding-right: 10px;
+    }
+    
+    .c1{
+      width: 200px;
+      height: 200px;
+      animation-name: rotate;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      border-radius: 50%;
+    }
+    @keyframes rotate{
+      from{ transform: rotate(-360deg); }
+      to{ transform: rotate(360deg); }
+    }
+    
+    @media (max-width: 768px) {
+    
+    .col-md-3 {
+      width: 100%;
+    }
+    
+    .f1 {
+      text-align: center;
+    }
+    
+    .f2 p {
+      font-size: 22px;
+    
+    }
+    
+    .f3 p {
+      font-size: 22px;
+    }
+    
+    .f4 h3 {
+      text-align: center;
+      margin-left: 0;
+    }
+    
+    .f4 ul {
+      justify-content: center;
+    }
+    
+    /* .navbar {
+      padding: ;
+    } */
+    .c1{
+      text-align: center;
+    }
+    .f2 h4{
+      font-size: 22px;
+    }
+    }
+    
+  </style>    
+<%-include('footer.ejs')%>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+let i = 0;
+const intervalId = setInterval(() => {
+    if (i <= 7) {
+        document.getElementById("counter").innerHTML = i+"+";
+        i++;
+    } else {
+        clearInterval(intervalId); // Stop the interval when i exceeds 25
+    }
+}, 100);
+
+let j = 0;
+const second = setInterval(() => {
+    if (j <= 25) {
+        document.getElementById("counter1").innerHTML = j+"+";
+        j++;
+    } else {
+        clearInterval(second); // Stop the interval when i exceeds 25
+    }
+}, 50);
+</script>
+</html>
+
+
+
+
+

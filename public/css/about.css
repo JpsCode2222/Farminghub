@@ -1,0 +1,307 @@
+*{
+	padding: 0px;
+	margin: 0px;
+
+}
+/*.img1{
+	height: 500px;
+	width: 100%;
+
+	float: left;
+	background-image: url("https://media.istockphoto.com/id/610650128/photo/plant-sprouts-in-the-field-and-farmer-is-watering-it.jpg?s=612x612&w=0&k=20&c=dtlooN55S-0_D4o8XdDNeBkM8Necbz1P94VjcDC7EuI=");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-color: var(--colorDark);
+    color: rgba(255, 255, 255, 0.8);
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+.img_inner{
+	position: absolute;
+	top: 0px;
+	margin-left: -20px;
+	color: white;
+	background-color: rgba(0,0,0,0.5);	
+	height:100%;
+	width: 100%;
+	
+
+}
+.img_inner h1{
+	font-family: cursive;
+	color: #82f573;
+	text-shadow: 2px 2px 2px red;
+	margin-top: 150px;
+	margin-left: 500px;
+	font-size: 60px;
+
+}
+.b1{
+	
+	background-color: white;
+	border-radius: 10px;
+	margin-top: 20px;
+	width: 100px;
+	height: 50px;
+	box-shadow: 0px 0px 5px 0px #82f573;
+	box-sizing: border-box;
+
+	
+
+}
+.b2{
+
+    background-color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0px 0px 5px 0px #82f573;
+	box-sizing: border-box;
+	
+
+}
+.c1{
+	float: right;
+	height: 200px;
+	margin-top: 150px;
+	padding-right: 10px;
+}
+
+.c1{
+    width: 200px;
+    height: 200px;
+    animation-name: rotate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-radius: 50%;
+}
+@keyframes rotate{
+    from{ transform: rotate(-360deg); }
+    to{ transform: rotate(360deg); }
+}
+
+*/
+
+
+
+.img1{
+	height: 500px;
+	width: 100%;
+
+	float: left;
+	/* /background-image: url(""); */
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-color: var(--colorDark);
+    color: rgba(255, 255, 255, 0.8);
+    padding-top: 100px;
+    /* box-sizing:  */
+}
+.img1 h1{
+	font-family: cursive;
+	color: #82f573;
+	text-shadow: 2px 2px 2px red;
+	/* margin-top: ; */
+	/* margin-left:; */
+	font-size: 60px;
+	
+}
+
+.b1{
+	
+	background-color: white;
+	border-radius: 10px;
+	margin-top: 20px;
+	width: 100px;
+	height: 50px;
+	box-shadow: 0px 0px 5px 0px #82f573;
+	box-sizing: border-box;
+}
+.b2{
+
+    background-color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0px 0px 5px 0px #82f573;
+	box-sizing: border-box;	
+
+}
+.img2{
+	  height: 200px;
+}
+
+.c1{
+    width: 200px;
+    height: 200px;
+    animation-name: rotate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-radius: 50%;
+}
+@keyframes rotate{
+    from{ transform: rotate(-360deg); }
+    to{ transform: rotate(360deg); }
+}
+
+
+.p1{
+	height: 750px;
+	padding-top: 150px;
+
+}
+.p2{
+	height: 750px;
+	padding-top: 150px;
+
+}
+.p1 h1{
+	font-size: 60px;
+}
+.p2 ul{
+	
+	list-style-type: none;
+}
+.p1 p{
+	font-size: 19px;
+}
+.p2 p{
+	font-size: 19px;
+}
+.imgl{
+	margin-top: 80px;
+	margin-left: 110px;
+}
+
+
+.m1{
+	height: 300px;
+	width: 25%;
+	float: left;
+	background-image: url("https://media.istockphoto.com/id/898449496/photo/agriculture-drone-fly-to-sprayed-fertilizer-on-the-green-tea-fie.jpg?s=612x612&w=0&k=20&c=XB9L5U65qaNqs8k7KPKOiL6N_mj1d1JpKPJFcmMsrz0=");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	
+}
+.m2{
+	height: 300px;
+	width: 25%;
+	float: left;
+	background-image: url("https://images.unsplash.com/photo-1559884743-74a57598c6c7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGFncmljdWx0dXJlfGVufDB8fDB8fHww");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	
+	
+}
+.m3{
+	height: 300px;
+	width: 25%;
+	float: left;
+	background-image: url("https://cdn.pixabay.com/photo/2017/08/07/03/27/green-2599290_640.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	
+	
+}
+.m4{
+	height: 300px;
+	width: 25%;
+	float: left;
+	background-image: url("https://media.istockphoto.com/id/1327831544/photo/farmers.jpg?s=612x612&w=0&k=20&c=qOsb8yJa2bfNHf5FmShgiQ500oG-mV9i8Gxkrytyaro=");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+
+	
+
+}
+@media (max-width:500px){    
+    .part1{
+		height:110px;
+		/* padding-top: 10px; */
+	}
+	.part2{
+		height: 50px;
+		/* background-color: red; */
+		/* padding-top: 10px; */
+	}
+}
+.part1{
+	height:310px;
+	padding-top: 50px;
+}
+.part2{
+	height: 310px;
+	/* background-color: red; */
+	padding-top: 50px;
+}
+
+.part1 h1{
+	font-size: 60px;
+}
+
+.part3{
+	height: 285px;
+	padding-top: 65px;
+
+}
+.part4{
+	height: 285px;
+	padding-top: 65px;
+	font-size: 18px;
+}
+.part7{
+	height: 350px;
+	padding-top: 65px;
+
+}
+.part8{
+	height: 350px;
+	padding-top: 65px;
+	font-size: 18px;
+
+}
+.big_img{
+	height: 600px;
+	background-image: url("");
+	
+
+}
+.r1{
+	height: 400px;
+}
+.r2{
+	height: 400px;
+}
+.r3{
+	height: 400px;
+}
+.r4{
+	height: 400px;
+}
+.rimg1{
+	height: 100px;
+	margin-top: 50px;
+}
+.rimg2{
+	height: 50px;
+	margin-top: 50px;
+}
+.rimg3{
+	height: 50px;
+	margin-top: 50px;
+}
+.rimg4{
+	height: 50px;
+	margin-top: 50px;
+}

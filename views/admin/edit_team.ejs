@@ -1,0 +1,29 @@
+<%-include('nav.ejs')%>
+<div class="container-fluid">
+<form action="/admin/update_team" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-4">
+            <input type="hidden" name="id" value="<%=teams[0].team_id%>">
+
+            Enter Quotes
+            <input type="text" name="quote" class="form-control mb-3">
+            Instagram Link*
+            <input type="text" name="insta_link" class="form-control mb-3" value="<%=teams[0].insta_link%>">
+            Whatsapp Link*
+            <input type="text" name="whatsapp_link" class="form-control" value="<%=teams[0].whatsapp_link%>">
+        </div>
+        <div class="col-md-4">
+            Select Image*
+            <input type="file" name="img" class="form-control mb-3">
+            Facebook Link*
+            <input type="text" name="facebook_link" class="form-control" value="<%=teams[0].facebook_link%>">
+            <Button class="btn btn-primary m-4">Save</Button>
+
+        </div>
+        <div class="col-md-4">
+            <img src="/uploads/<%=teams[0].img%>" alt="" class="w-50 mt-3 mb-3 d-block">
+        </div>
+    </div>
+</form>
+</div>
+<%-include('footer.ejs')%>

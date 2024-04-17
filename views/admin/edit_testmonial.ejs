@@ -1,0 +1,35 @@
+<%-include('nav.ejs')%>
+<div class="container-fluid">
+    <div class="col-md-12">
+        <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+            <h3> Update Testimonial</h3>
+        </div>
+    </div>
+    <form action="/admin/update_testomonial" method="post" enctype="multipart/form-data">
+    <div class="row mt-5 p-5" style="border: 1px solid rgba(128, 0, 128, 0.512);">
+        <div class="col-md-3">
+            <input type="text" value="<%=testimonial[0].test_id%>" name="id">
+            Testimonial User Image*
+            <input type="file" class="form-control mb-3" name="user_img" value="<%=testimonial[0].test_img%>" required>
+            <img src="/uploads/<%=testimonial[0].test_img%>" alt="" class="w-100">
+        </div>
+        <div class="col-md-3">
+            Testimonial Animated Image*
+            <input type="file" class="form-control mb-4" name="user_img2" value="<%=testimonial[0].test_img%>" required >
+            <img src="/uploads/<%=testimonial[0].anim_img%>" alt="" class="" width="100px" >
+
+        </div>
+        <div class="col-md-3">
+            Testimonial Discription*
+            <input type="text" class="form-control" name="disc" value="<%=testimonial[0].text_disc%>">
+        </div>
+        <div class="col-md-3">
+            Testimonial User Name*
+            <input type="text" class="form-control" name="user_name" value="<%=testimonial[0].test_name%>">
+        </div>
+        <div class="col-md-3 mt-3">
+            <button class="btn btn-info">Update Testimonial</button>
+        </div>
+    </div>
+</form>
+</div>

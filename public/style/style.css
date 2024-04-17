@@ -1,0 +1,341 @@
+body{
+    margin: 0px !important;
+    padding: 0px !important;
+    box-sizing: border-box;
+}
+.first_ul li{
+display: inline-block;
+margin-left: 20px;
+}
+.f_head{
+    background-color: #c1babae4;
+}
+.navbar-brand{
+    margin-right: 400px;
+}
+.navbar-nav{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17PX !important;
+}
+.navbar-nav li{
+    margin-left: 10px !important;
+
+}
+.nav-item a{
+    font-size: 14px !important;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding-top: 10px;
+}
+.nav-item .dropdown-menu{
+    opacity: 0;
+}
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+}
+.carousel-item{
+    position: relative;
+}
+.carousel-item .abs_div_slider{
+    position: absolute;
+    top: 25%;
+    text-align: center;
+    left: 15%;
+    color: rgb(251, 248, 248) !important;
+}
+
+.carousel-item .abs_div_slider h1{
+    font-size: 100px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+.carousel-item .abs_div_slider p{
+    font-family: 'Playfair Display', serif;
+    font-family: 'Satisfy', cursive;
+    font-size: 35px;
+    color: skyblue;
+}
+.main_title{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+.sub_tittle{
+    font-family: 'Playfair Display', serif;
+    font-family: 'Satisfy', cursive;
+    color: skyblue;
+    font-size: 35px;
+}
+.second_nav li{
+    display: inline-block !important;
+    margin-left: 30px;
+    font-weight: bold;
+    padding: 15px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+}
+.second_nav li a{
+    text-decoration: none;
+    color: black;
+}
+.second_nav li:hover{
+    background-color: #8DBCD2;
+    color: white !important;
+}
+.second_nav li:hover a{
+    color: white;
+}
+
+.btn_mrinfo{
+    height: 50px;
+    width: 200px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    background-color: #E6B59E;
+    margin-top: 13px;
+    margin-left: -330px;
+}
+.rel_class{
+    position: relative;
+    overflow: hidden;
+
+}
+.abs_div{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    background-color: rgba(35, 32, 32, 0.611);
+    text-align: center;
+    justify-content: center;
+    color: orangered;
+    opacity: 0;
+    padding-top: 50px;
+    transition: all 0.4s;
+    font-size: 100px;
+    cursor: pointer;
+}
+.abs_div:hover{
+    opacity: 1;
+}
+
+.rel_class:hover img{
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+.mdc{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    color: black;
+    z-index: 9999;
+    background-color: white;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 13px;
+    z-index: 9;
+    color: orangered;
+}
+
+.btn_submit{
+    height: 50px;
+    width: 200px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    background-color: #E6B59E;
+    margin-top: 13px;
+}
+input{
+    height: 50px;
+    border-radius: 0px !important;
+    border: 1px solid black !important;
+}
+.footer_ul li{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 25px;
+    color: #E0A78C;
+    padding: 3px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: white ;
+}
+.ab_div{
+    position: relative;
+}
+.ab_div1{
+    position: absolute;
+    top: 30%;
+    height: 100%;
+    width: 99%;
+}
+.abs_22{
+    font-size: 70px;
+    color: white;
+    top: 40%;
+    font-weight: bold;
+}
+.ab_div{
+    height: 55vh;
+}
+.ab_div img{
+background-size: cover;
+height: 100%;
+}
+.test_slider{
+    position: relative;
+}
+.testimonial{
+    height: 100%;
+    width: 98%;
+    top: 0%;
+    padding-top: 10%;
+    background-color: rgba(19, 16, 16, 0.537);
+    position: absolute;
+}
+    .displayy{
+        opacity: 1;
+        padding: 0px 200px;
+        color: whitesmoke;
+    }
+
+    .test_img img{
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 50px;
+    }
+    .carousel-item {
+        width: 100% !important;
+    }
+    .carousel-item img{
+        width: 100% !important;
+    }
+    .content{
+    color: white;
+    padding: 0px 200px;
+    }
+    .our_val{
+        font-size: 60px;
+    }
+    .peopleSay{
+        padding: 0px 200px !important;
+    }
+    .msg_ic i{
+        font-size: 35px;
+        background-color: #8DBCD2;
+        padding: 15px 15px;
+        border-radius: 50px;
+    }
+    .contact_us{
+        height: 50px;
+        width: 170px;
+        background-color: #E6B59E;
+        border: 0px;
+        font-weight: bold;
+        color: white;
+        transition: all 0.5s;
+    }
+    .contact_us:hover{
+        background-color: #8DBCD2;
+        font-weight: bold;
+    }
+    .ab_div img{
+        filter: brightness(0.8);
+    }
+    .left_brdr{
+        border-right: 2px solid black;
+    }
+    .contctt i{
+        background-color: rgb(191, 227, 250);
+        padding: 12px 15px;
+        font-size: 25px;
+        color: #E6B59E;
+        border-radius: 50px;
+    }
+    .first_inp{
+        border-radius: 50px !important;
+        margin-top: 20px;
+        background-color: #ECEAE6;
+        border: 0px !important;
+        padding-left: 20px !important;
+        padding-top: -20px !important;
+    }
+    .second_inp{
+        border-radius: 20px !important;
+        height: 100px;
+        margin-top: 20px;
+        border: 0px !important;
+
+        background-color: #ECEAE6;
+    }
+    .send_btn{
+        height: 50px;
+        width: 180px;
+        border: 0px;
+        border-radius: 50px;
+        margin-top: 30px;
+        font-weight: bold;
+    }
+    .appointment_first img{
+        filter: brightness(0.2);
+
+    }
+
+    .appointment_first {
+      position: relative;
+    }
+    .appointment_second{    
+        z-index: 99;
+        background-color: rgba(41, 44, 56, 0.567);
+        text-align: justify;
+    }
+    .appointment_second h1{
+        color: white !important;
+        margin-top: 20px;
+    }
+    .appointment_third{
+        background-color: rgba(123, 209, 243, 0.852);
+
+    }
+    .appointment_second p{
+        color: white;
+    }
+    select{
+        height: 50px;
+        border-radius: 0px;
+    }
+    .appointment_btn{
+        height: 50px;
+        width: 100%;
+        margin-top: 20px;
+        border: none;
+        background-color: #091E3E;
+        color: white;
+        font-weight: bold;
+    }
+    .footer_pripo li{
+        display: inline-block;
+        margin-right: 10px;
+     
+    }
+
+    .footer_pripo li a{
+        color: white;
+        /* text-decoration: none; */
+    }
+    .privacc{
+        box-shadow: 0px 0px 15px 0px rgba(156, 151, 151, 0.411);
+        padding: 20px;
+    }
+   .thselogo img{
+    width: 200px !important;
+   }

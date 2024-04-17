@@ -1,0 +1,66 @@
+<%-include('nav.ejs')%>
+<div class="container-fluid">
+    <div class="col-md-12">
+        <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+            <h3>Edit Achiments And Images</h3>
+        </div>
+    </div>
+    <form action="/admin/save_achivements" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-4">
+            First Image*
+            <input  type="file" name="first_img" class="bg-primary-subtle form-control">
+            <input type="hidden" name="achivement_id" class="bg-primary-subtle form-control">
+            <img src="/uploads/<%=achivement[0].first_img%>" alt="" class=" mt-3 mb-3" width="300px">
+        </div>
+        <div class="col-md-4">
+            Second Image*
+            <input  type="file" name="second_img" class="bg-primary-subtle form-control">
+            <img src="/uploads/<%=achivement[0].second_img%>" alt="" width="300px" class="mt-3 mb-3">
+        </div>
+        <div class="col-md-4">
+            Animated Image*
+            <input  type="file" name="third_img" class="bg-primary-subtle form-control bg-danger">
+            <img src="/uploads/<%=achivement[0].third_img%>" alt="" width="100px" class="mt-3 mb-3">
+            <div class="col">
+                Achivements Image
+                <input  type="file" name="achivement_img" class="bg-primary-subtle form-control">
+                <img src="/uploads/<%=achivement[0].achivement_logo%>" alt="" width="100px" class="mt-3 mb-3">
+            </div>
+            <div class="col">
+                Earth logo
+                <input  type="file" name="earth_img" class="bg-primary-subtle form-control">
+                <img src="/uploads/<%=achivement[0].earth_logo%>" alt="" class="mt-3 mb-3" width="100px"> 
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col">
+            Tittle*
+            <input type="text" name="achivements" class="bg-primary-subtle form-control" value="<%=achivement[0].tittle%>">
+        </div>
+        <div class="col">
+            Leader Section
+            <input type="text" name="leaders" class="bg-primary-subtle form-control" value="<%=achivement[0].leader_section%>">
+        </div>
+        <div class="col">
+            More Discription
+            <input type="text" name="disc" class="bg-primary-subtle form-control" value="<%=achivement[0].more_disk%>">
+        </div>
+        <div class="col">
+            Award Count
+            <input type="text" name="award_count" class="bg-primary-subtle form-control" value="<%=achivement[0].award_count%>" >
+        </div>
+        <div class="col">
+            Experiance Count
+            <input type="text" name="experiance" class="bg-primary-subtle form-control" value="<%=achivement[0].experiance%>">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <button class="btn bg-info w-100">Save Achivement Page</button>
+        </div>
+    </div>
+</bg-primary-subtle form>
+</div>
+<%-include('footer.ejs')%>

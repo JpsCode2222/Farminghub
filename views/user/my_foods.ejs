@@ -1,0 +1,468 @@
+<%-include('navbar')%>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shop</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/foods.css">
+        <!-- bootstrap link css -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+    </head>
+    <body>
+
+        <div class="container1" data-aos="fade-down">
+            <div class="row">
+                <div class="col-12" data-aos="fade-down">
+                    <div class="image-container" id="container-1" data-aos="fade-down">
+                        <img data-aos="fade-down" src="static_img/img/story-img-1.webp" alt="Our Story Image"
+                            class="img1">
+                        <div class="text-overlay1">
+
+                            <br> <h1 class="h01" data-aos="fade-down">Shop</h1>
+                            <br>
+                            <button type="button"
+                                class="btn btn-secondary btn-lg m-1" data-aos="fade-down">Home</button>
+                            <button type="button"
+                                class="btn btn-secondary btn-lg text-warning" data-aos="fade-down">Shop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br>
+
+        <div class="container" id="conainer01">
+            <div class="row" data-aos="fade-down">
+                <div class="col-md-4">
+                    <h2 data-aos="fade-down">Categories</h2>
+                    <div class="container" data-aos="fade-down">
+                        <ul class="list-group" data-aos="fade-down">
+                            <br> <li class="list-group-item ">Blog
+                                Fullwidth</li>
+                            <hr>
+                            <li class="list-group-item">Agricultural
+                                products</li>
+                            <hr>
+                            <li class="list-group-item">Cattle, calves &
+                                dairy</li>
+                            <hr>
+                            <li class="list-group-item">Crops farming</li>
+                            <hr>
+                            <li class="list-group-item">Crops farming</li>
+                            <hr>
+                            <li class="list-group-item">Poultry</li>
+                            <hr>
+                            <li class="list-group-item">Agricultural
+                                products</li>
+                            <hr>
+                            <li class="list-group-item">Cattle, calves &
+                                dairy</li>
+                            <hr>
+                            <li class="list-group-item">Crops farming</li>
+                            <hr>
+                            <li class="list-group-item">Fish farm</li>
+                            <hr>
+                            <li class="list-group-item">Poultry</li>
+                            <hr>
+
+                        </ul>
+                        <div class="container" id="scontainer" data-aos="fade-down">
+                            <div class="row">
+                                <div class="col" data-aos="fade-down">
+                                    <div class="card border-0">
+                                        <label for class="label1">Search</label>
+                                        
+                                        <input type="text" name id
+                                            placeholder="Search"
+                                            class="inp2">
+                                            
+                                    </div>
+ 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container bg-white mt-5" id="search" data-aos="fade-down">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card border-0 bg-transparent">
+                                        <label for class="fs-3">Cart</label>
+                                        <p class="text-secondary mt-3">No
+                                            products in the cart.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+<div class="container" id="container4" data-aos="fade-down">
+    <div class="row">
+        <div class="col-md-6  data-aos="fade-down"offset-md-3 mt-2">
+            <p class="text-start fs-5" data-aos="fade-down">Price Filter</p>
+            <!-- Price range slider -->
+            <input type="range" min="0" max="30"  class="inp5" value="0" class="custom-range price-slider mb-5w">
+            <!-- Price range labels -->
+            <div class="text-center">
+                <label for="price-range" data-aos="fade-down">Price Range:</label>
+                <span id="price-range-value" style="margin-left: 0.5rem;">$0</span> - <span>$30</span>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+
+                </div>
+
+
+<!-- price filter js code  -->
+
+<script>
+    // JavaScript to update price range value
+    const priceSlider = document.querySelector('.price-slider');
+    const priceRangeValue = document.getElementById('price-range-value');
+    
+    priceSlider.addEventListener('input', function() {
+        priceRangeValue.textContent = '$' + this.value;
+    });
+</script>
+
+
+
+
+
+<div class="col-md-8">
+
+                    <div class="row">
+
+                        <div class="col-md-6" data-aos="fade-down">
+                            <a href="product1.html"
+                                style="text-decoration: none;color: black;">
+                                <img src="static_img/img/i1.jpg" alt="Product 1"
+                                    class="img-fluid">
+                                <div class="card-body">
+                                    <h5 class="card-title">Celebrity
+                                        tomatoes</h5></a>
+                                <p class="card-text"></p>
+                                <div
+                                    class="d-flex justify-content-between align-items-center">
+                                    <h5> <strike>$21.99 </strike><span
+                                            class="text-danger">$15.99</span>/1kg</h5>
+
+                                    <h5> <i
+                                            class="fa-solid fa-cart-shopping"></i>
+
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6" data-aos="fade-down">
+                                <a href="product2.html"
+                                    style="text-decoration: none; color:black;">
+                                    <img src="static_img/img/i2.jpg" alt="Product 2"
+                                        class="img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Onion bulbs</h5>
+                                    </a> <p class="card-text"></p>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center">
+
+                                        <h5><span
+                                                class="text-warning text-danger">$24.99</span>/1kg</h5>
+                                        <i
+                                            class="fa-solid fa-cart-shopping"></i>
+
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-down">
+                                <a href="product3.html"
+                                    style="text-decoration: none; color:black;">
+                                    <img src="static_img/img/i3.jpg" alt="Product 3"
+                                        class="img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Corn</h5>
+                                    </a>
+                                    <p class="card-text"></p>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center">
+                                        <h5><span
+                                                class="text-danger">$15.99</span>/1kg</h5>
+
+                                        <h5> <i
+                                                class="fa-solid fa-cart-shopping"></i>
+
+                                        </div>
+                                        <div>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="far fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6" data-aos="fade-down">
+                                    <a href="product4.html"
+                                    style="text-decoration: none; color:black;">
+                                      <img src="static_img/img/i4.jpg" alt="Product 4"
+                                        class="img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Eggplant</h5>
+                                    </a><p class="card-text"></p>
+                                        
+                                        <div
+                                            class="d-flex justify-content-between align-items-center">
+
+                                            <h5><span
+                                                    class="text-danger">$21.99</span>/1kg</h5>
+                                            <i
+                                                class="fa-solid fa-cart-shopping"></i>
+
+                                        </div>
+                                        <div>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="far fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6" data-aos="fade-down">
+                                    <a href="product5.html"
+                                    style="text-decoration: none; color:black;">
+                                    <img src="static_img/img/i5. jpg" alt="Product 5"
+                                        class="img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Broccoli</h5>
+                                    </a>     <p class="card-text"></p>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center">
+
+                                            <h5><span
+                                                    class="text-danger">$13.99</span>/1kg</h5>
+                                            <i
+                                                class="fa-solid fa-cart-shopping"></i>
+
+                                        </div>
+                                        <div>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                 class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="far fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6" data-aos="fade-down">
+                                    <a href="product6.html"
+                                        style="text-decoration: none; color:black;">
+                                        <img src="static_img/img/i6.jpg" alt="Product 6"
+                                            class="img-fluid">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bell
+                                                pepper</h5>
+                                        </a>
+                                        <p class="card-text"></p>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center">
+
+                                            <h5><span class="text-danger">
+                                                    $8.99
+                                                </span>/1kg</h5>
+                                            <i
+                                                class="fa-solid fa-cart-shopping"></i>
+
+                                        </div>
+                                        <div>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="far fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6" data-aos="fade-down">
+                                    <a href="product7.html"
+                                    style="text-decoration: none; color:black;">
+                                    <img src="static_img/img/i7.jpg" alt="Product 7"
+                                        class="img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Chili pepper</h5>
+                                    </a> <p class="card-text"></p>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center">
+
+                                            <h5><span
+                                                    class="text-danger">$$9.99</span>/1kg</h5>
+                                            <i
+                                                class="fa-solid fa-cart-shopping"></i>
+
+                                        </div>
+                                        <div>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="far fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6" data-aos="fade-down">
+                                    <a href="product8.html"
+                                    style="text-decoration: none; color:black;">
+                                    <img src="static_img/img/i8.jpg" alt="Product 8"
+                                        class="img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-title">$9.99 </h5>
+                                    </a>
+                                        <p class="card-text"></p>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center">
+
+                                            <h5><span
+                                                    class="text-danger">$$11.99</span>/1kg</h5>
+                                            <i
+                                                class="fa-solid fa-cart-shopping"></i>
+
+                                        </div>
+                                        <div>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="fas fa-star text-warning"></i>
+                                            <i
+                                                class="far fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <nav aria-label="..." >
+                                    <ul class="pagination pagination-sm mt-4 ">
+                                        <li class="page-item active "
+                                            aria-current="page">
+                                            <span class="page-link p-2 ps-4" href="index.html" >1</span>
+                                        </li>
+                                        <li class="page-item"><a
+                                                class="page-link p-2 ps-4"
+                                                href="product_page_2.html">2</a></li>
+                                        <li class="page-item"><a
+                                                class="page-link p-2 ps-4" href="product_page_2.html"><i
+                                                    class="fa-solid fa-arrow-right-long"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br><br><br>
+
+                <!-- subscribe section -->
+                <div class=" ">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="image-container" id="container-3">
+                                <img src="static_img/img/story-img-1.webp"
+                                    alt="Our Story Image"
+                                    class="img2">
+                                <div class="text-overlay"
+                                    style="margin-top: 21rem;">
+                                    <p class="font-weight-bold" id="sign"
+                                        style="font-size: 1.2rem; color:rgb(255, 188, 188)">Sign
+                                        up for</p>
+                                    <br><br>
+                                    <br> <h1 class="h02">Newslater</h1>
+                                    <br>
+                                    <div class="form-group"
+                                        style="  width: 170%;height:35vh;margin-top:2rem;margin-left:-4.5rem ">
+                                        <input type="email"
+                                            style="border:1px solid red;"
+                                            class="form-control h-25"
+                                            id="inputEmail"
+                                            name="email"
+                                            placeholder="Enter email"
+                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                            required />
+                                        <br> <button type="button"
+                                            class="btn btn-outline-light btn-lg text-warning "
+                                            id="sub">
+                                            Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>                        </div>
+
+                    </div>
+                </div>
+
+                <script
+                    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+                    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+                    crossorigin="anonymous"></script>
+                <script
+                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+                    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+                    crossorigin="anonymous"></script>
+
+            </body>
+        </html>
+
+<%-include('footer')%>

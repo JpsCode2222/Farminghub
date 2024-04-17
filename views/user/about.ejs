@@ -1,0 +1,188 @@
+<%-include('navbar')%>
+
+
+<head>
+	<title></title>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/d5a4936763.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+    <link rel="stylesheet" type="text/css" href="css/web2.css">
+</head>
+<body>
+	
+
+
+    <div class="container-fluid p-0" data-aos="fade-down" data-aos="fade-down">
+		<div class="row w-100 m-0 p-0">
+			<div class="col-md-12 img1" style="background-image: url('/uploads/<%=sec1[0].bg_img%>'); background-size: 100% 100%;">
+				<h1 class="text-center" data-aos="fade-down">Agriculture</h1>
+
+				<center>
+				<button class="btn btn-white text-dark b1 text-center" type="submit" data-aos="fade-down">Home</button>
+
+				<button class="btn btn-white text-danger b2 text-center" data-aos="fade-down">Single Services</button>
+				</center>
+				<div class=" d-flex" >
+					<img src="c.png" class="c1">
+				</div>
+
+
+
+				
+			</div>
+		</div>
+	</div>
+
+	<section class="container-fluid" data-aos="fade-down">
+        <div class="row mt-5 w-100">
+            <div class="col-md-5 ps-5" data-aos="fade-down">
+                <h6 class="about_farm mt-5 pt-5"><%=about_farm[0].first_heding%></h6>
+                <h1 class="about_page_h1"><%=about_farm[0].second_heading%>
+                </h1>
+                
+                <p class="text-secondary about_page_p"><%=about_farm[0].discription%></p>
+                <a href="/more_about_home"><button class="more_about_us">More About Us</button></a>
+
+            </div>
+            <div class="col-md-7 rel_img" data-aos="fade-down">
+              <img src="/uploads/<%=about_farm[0].before_hover%>" alt="" class="d-block w-100">
+              <div class="abs_img">
+                <img src="/uploads/<%=about_farm[0].ater_hover%>" alt="" class="d-block w-100">
+              </div>
+            </div>
+            <div class="col-md-12" data-aos="fade-down">
+                <div class="row mt-5 w-100 award_parent rel_img2">
+                    <div class="col-md-3 ms-2 ">
+                      <img src="/uploads/<%=achivement[0].first_img%>" alt="" class="d-block w-100">
+                    </div>
+                    <div class="abs_img2 col-md-3">
+                      <img src="/uploads/<%=achivement[0].third_img%>" alt="" class="loading_img d-block w-50">
+                      <img src="/uploads/<%=achivement[0].second_img%>" alt="" class="d-block w-100">
+                    </div>
+                    <div class="row awards">
+                      <div class="col-md-8 mt-5" data-aos="fade-down">
+                        <h5 class="text-danger"><%=achivement[0].tittle%></h5>
+                        <h3 class="leaders_of_agg"><%=achivement[0].leader_section%></h3>
+                        <p class="about_page_p leader_of_p"><%=achivement[0].more_disk%></p>
+                        <div class="row">
+                          <div class="col-md-3">
+                            <img src="/uploads/<%=achivement[0].achivement_logo%>" alt="" class="w-100">
+                          </div>
+                          <div class="col-md-4">
+                            <h3 class="award_count"><%=achivement[0].award_count%> +<br>
+                              <p>Award Win</p>
+                            </h3>
+                          </div>
+                          <div class="col-md-3">
+                            <img src="/uploads/<%=achivement[0].earth_logo%>" alt="" class="w-100">
+                          </div>
+                          <div class="col-md-1">
+                            <h3 class="award_count"><%=achivement[0].experiance%>+<br>
+                              <p>Experiance</p>
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            
+        </div>
+    </section>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 p1" data-aos="fade-down">
+
+				<h6 class="text-danger pt-4 mt-md-5" data-aos="fade-down">Welcome to Seedone!</h6>
+
+               <h1>We are building a<br> better future</h1>
+
+          <img src="https://webdesign-finder.com/seedone/wp-content/uploads/2022/05/Leaf-1.svg"  class="imgl">
+
+			</div>
+			<div class="col-md-6 p2 mt-md-5" data-aos="fade-down">
+				
+				<p class="mb-4 mt-4">Vivamus suscipit tortor eget felis porttitor volutpat suscipit tortor eget felis porttitor volutpat mauris blandit aliquet elit.</p>
+
+				<P class="mt-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis ifaucibus orci luctus ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</P>
+
+				<p class="mt-4 mb-4">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta proin eget tortor risus droin tortor risus.</p>
+				 <ul class="d-flex mt-5 mb-5ss" >
+				 	<li>
+
+				<img src="https://webdesign-finder.com/seedone/wp-content/uploads/elementor/thumbs/Image-40-profzp5t4x2j30x5aebuxa9xlmjr4qgfj88e0vcapo.png" data-aos="fade-down">
+			</li>
+         
+				<li>
+          <h3 class="pl-4 pr-4" data-aos="fade-down">Shaun L. Johnson</h3>
+        <p class="text-danger pl-4 pr-4" data-aos="fade-down">PR manager</p></li>
+
+
+<li>
+
+<img src="https://webdesign-finder.com/seedone/wp-content/uploads/2022/05/Signature.png" data-aos="fade-down"></li>
+
+</ul>
+
+
+			</div>
+		</div>
+	</div>
+<!-- ========================================= -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-xl-3 col-lg-4 col-md-6 col-sm-12  col-12 m1 img-fluid" data-aos="fade-down"></div>
+
+        <div class="col-md-12 col-xl-3 col-lg-4 col-md-6 col-sm-12  col-12  m2 img-fluid" data-aos="fade-down"></div>
+
+        <div class="col-md-12 col-xl-3 col-lg-4 col-md-6 col-sm-12  col-12  m3 img-fluid" data-aos="fade-down"></div>
+
+        <div class="col-md-12 col-xl-3 col-lg-4 col-md-6 col-sm-12  col-12  m4 img-fluid" data-aos="fade-down"></div>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6 part1" data-aos="fade-down">
+			
+			<h6 class="text-danger pt-4">Why our clients love us</h6>
+
+               <h1>Why you should<br> choose us</h1>
+		</div>
+		<div class="col-md-6 part2" data-aos="fade-down">
+			<center>
+        <img src="https://webdesign-finder.com/seedone/wp-content/uploads/2022/05/Leaf-1.svg"  class="Leaf2">
+        </center>
+
+
+		</div>
+	</div>
+</div>
+
+
+<div class="container-fluid" data-aos="fade-down">
+	<div class="row">
+		<div class="col-md-12 big_img">
+
+			<iframe width="100%" height="600"  src="https://www.youtube.com/embed/WeDvNscRRPE?si=FPdeYKBL8eM2biYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+
+<%-include('footer')%>

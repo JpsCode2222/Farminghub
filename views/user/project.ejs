@@ -1,0 +1,312 @@
+<%-include("navbar.ejs")%>
+
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kristi&display=swap" rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                scroll-behavior: smooth;
+            }
+
+            .style_font {
+                font-family: "Kristi", cursive;
+                font-style: normal;
+                font-size: 5rem;
+            }
+
+            .title_bg_banner_first {
+                min-height: 400px;
+                width: 100%;
+                background-size: 100% 100%;
+                background-color: rgba(18, 18, 18, 0.817);
+                background-repeat: no-repeat;
+            }
+
+            .title_bg_banner_second {
+                max-height: 100%;
+                min-height: 300px;
+                width: 100%;
+                background-size: 100% 100%;
+                background-color: rgba(18, 18, 18, 0.817);
+                background-repeat: no-repeat;
+            }
+
+            .bg_img_agri_card {
+                transition: all 0.3s ease-out !important;
+            }
+
+            .blue_background {
+                transition: all 0.3s ease-out !important;
+            }
+
+            .bg_img_agri_card:hover .blue_background {
+                height: 100%;
+                width: 100%;
+                margin: auto;
+                background-color: rgba(41, 254, 155, 0.381);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-size: 40px;
+                transition: all 0.5s ease-out !important;
+            }
+
+            .card-body {
+                overflow: hidden !important;
+            }
+
+            .bg_img_agri_card:hover {
+                transform: scale(1.2);
+            }
+
+            .bg_img_agri_card:hover i {
+                display: block !important;
+            }
+
+            @media (max-width:800px) {
+                .bg_img_agri_card_single {
+                    height: 350px !important;
+                }
+
+                .title_bg_banner_second {
+                    height: 350px !important;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 p-0 text-center" data-aos="fade-down">
+                        <div style="background-image: url(/uploads/<%=sec1.bg_img%>); height: 500px;margin-top:
+                            -52px;"
+                            class="title_bg_banner_second d-flex flex-column align-item-center justify-content-center">
+                            <div>
+                                <p class="font-weight-bold text-success style_font" data-aos="fade-down">
+                                    <%=sec1.heading%>
+                                </p>
+                            </div>
+                            <div class="">
+                                <button class="btn btn-light font-weight-bold mr-2" data-aos="fade-down">
+                                    <%=sec1.btn1%>
+                                </button>
+                                <button class="btn btn-light text-danger font-weight-bold" data-aos="fade-down">
+                                    <%=sec1.btn2%>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container-fluid">
+                <div class="row justify-content-center"  data-aos="fade-down">
+                    <div class="col-lg-12">
+                        <h1 class="font-weight-bold text-center"
+                            style="font-family:cursive;font-size: 100px; margin-top:-50px;color: rgba(165, 189, 185, 0.412);">
+                            <%=sec2.bg_heading%>
+                        </h1>
+
+                        <p class="font-weight-bold text-danger text-center "
+                            style="font-family:cursive;margin-top: -60px;font-size: 1.5rem;" data-aos="fade-down">
+                            <%=sec2.heading%>
+                        </p>
+                        <h1 class="text-dark text-center " style="font-size: 2.5rem;">
+                            <%=sec2.title%>
+                        </h1>
+
+                    </div>
+                    <div class="col-lg-12 p-0">
+                        <img src="/uploads/<%=sec2.img%>" class="w-100 mt-lg-4" height="600px" alt="" data-aos="fade-down">
+                    </div>
+                    <div class="col-lg-11 text-justify mt-5" data-aos="fade-down">
+                        <br>
+                        <p style="font-size: 1.3rem;" data-aos="fade-down">
+                            <%=sec2.para_heading%>
+                        </p><br>
+                        <p style="font-size: 1.2rem;" class="text-secondary" data-aos="fade-down">
+                            <%=sec2.para%>
+                        </p><br>
+                        <ul style="font-size: 1.2rem;" class="text-secondary">
+                            <li style="list-style: none;"><i
+                                    class="fa fa-check h1 font-weight-bold mr-2 text-success" data-aos="fade-down"></i>
+                                <%=sec2.point1%>
+                            </li>
+                            <li style="list-style: none;"><i
+                                    class="fa fa-check h1 font-weight-bold mr-2 text-success" data-aos="fade-down"></i>
+                                <%=sec2.point2%>
+                            </li>
+                            <li style="list-style: none;"><i
+                                    class="fa fa-check h1 font-weight-bold mr-2 text-success" data-aos="fade-down"></i>
+                                <%=sec2.point3%>
+                            </li>
+                            <li style="list-style: none;"><i
+                                    class="fa fa-check h1 font-weight-bold mr-2 text-success" data-aos="fade-down"></i>
+                                <%=sec2.point4%>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <div class="container-fluid h-100 w-100 text-center justify-content-center d-flex flex-column align-item-center"
+                style="background-image: url(/assets/img/title_bg_banner_img1.png);height: 400px;width: 100%;background-repeat: no-repeat;background-size: cover;">
+                <div class="row p-5">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card" style="background-color: transparent; border: 0;">
+                            <div class="card-body my_card_body">
+                                <div class="row">
+                                    <div
+                                        class="col-4 text-center justify-content-center align-item-center text-lg-end d-flex flex-column">
+                                        <img src="/uploads/<%=sec3[0].svg%>" class="h-75 w-100" alt="" data-aos="fade-down">
+                                    </div>
+                                    <div class="col-8" data-aos="fade-down">
+                                        <p style="font-size: 80px;" class="text-danger ">17k</p>
+                                        <p style="margin-top: -30px;">Happy clients</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6" data-aos="fade-down">
+                        <div class="card" style="background-color: transparent; border: 0;">
+                            <div class="card-body my_card_body">
+                                <div class="row">
+                                    <div
+                                        class="col-4 text-center justify-content-center align-item-center text-lg-end d-flex flex-column" data-aos="fade-down">
+                                        <img src="/uploads/<%=sec3[1].svg%>" class="h-75 w-100" alt="" data-aos="fade-down">
+                                    </div>
+                                    <div class="col-8" data-aos="fade-down">
+                                        <p style="font-size: 80px;color: yellow;" class="" data-aos="fade-down">87</p>
+                                        <p style="margin-top: -30px;" data-aos="fade-down">Awards won</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6" data-aos="fade-down">
+                        <div class="card" style="background-color: transparent; border: 0;" data-aos="fade-down">
+                            <div class="card-body my_card_body" data-aos="fade-down">
+                                <div class="row" data-aos="fade-down">
+                                    <div
+                                        class="col-4 text-center justify-content-center align-item-center text-lg-end d-flex flex-column">
+                                        <img src="/uploads/<%=sec3[2].svg%>" class="h-75 w-100" alt="" data-aos="fade-down">
+                                    </div>
+                                    <div class="col-8" data-aos="fade-down">
+                                        <p style="font-size: 80px; color: greenyellow;" class=" ">25</p>
+                                        <p style="margin-top: -30px;">Years experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6" data-aos="fade-down">
+                        <div class="card" style="background-color: transparent; border: 0;" data-aos="fade-down">
+                            <div class="card-body my_card_body">
+                                <div class="row" data-aos="fade-down">
+                                    <div
+                                        class="col-4 text-center justify-content-center align-item-center text-lg-end d-flex flex-column">
+                                        <img src="/uploads/<%=sec3[3].svg%>" class="h-75 w-100" alt="">
+                                    </div>
+                                    <div class="col-8" data-aos="fade-down">
+                                        <p style="font-size: 80px;color: green;" class="">34</p>
+                                        <p style="margin-top: -30px;">Headquaters</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pb-5 pt-5 mt-lg-3" data-aos="fade-down">
+            <div class="container-fluid">
+                <div class="row justify-content-center" data-aos="fade-down">
+                    <div class="col-lg-12 " data-aos="fade-down">
+                        <h1 class="font-weight-bold text-light text-center "
+                            style="font-family:cursive;font-size: 5rem;">
+                            Agriculture</h1>
+                        <h1 class="text-dark text-center "
+                            style="font-family:cursive;margin-top: -60px;font-size: 2.5rem;">
+                            Organic production
+                        </h1>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-5">
+            <div class="container-fluid" data-aos="fade-down">
+                <div class="row">
+                    <div class="col-md-4" data-aos="fade-down">
+                        <% for(var i=0;i< 2; i++){%>
+                          <div class="card mt-4" data-aos="fade-down">
+                          <div class="card-body my_card_body p-0 border-0">
+                              <div class="bg_img_agri_card"
+                                  style="background-image: url(/uploads/<%=sec4[i].img%>);background-repeat: no-repeat;background-size: 100% 100%;height: 350px;">
+                                  <div class="blue_background">
+                                      <i class="fa fa-video d-none text-light mr-5"></i>
+                                      <i class="fa fa-bars d-none text-light"></i>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                        <%}%>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-down">
+                        <div class="card mt-4 mb-4" data-aos="fade-down">
+                            <div class="card-body my_card_body p-0 border-0">
+                                <div class="bg_img_agri_card bg_img_agri_card_single"
+                                    style="background-image: url(/uploads/<%=sec4[2].img%>);background-repeat: no-repeat;background-size: 100% 100%;height: 725px;">
+                                    <div class="blue_background">
+                                        <i class="fa fa-video d-none text-light mr-5"></i>
+                                        <i class="fa fa-bars d-none text-light"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-down">
+                    <% for(var i=3;i< sec4.length; i++){%>
+                          <div class="card mt-4" data-aos="fade-down">
+                          <div class="card-body my_card_body p-0 border-0">
+                              <div class="bg_img_agri_card"
+                                  style="background-image: url(/uploads/<%=sec4[i].img%>);background-repeat: no-repeat;background-size: 100% 100%;height: 350px;">
+                                  <div class="blue_background">
+                                      <i class="fa fa-video d-none text-light mr-5"></i>
+                                      <i class="fa fa-bars d-none text-light"></i>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%-include("footer.ejs")%>

@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+
+body {
+  overflow-x: hidden;
+}
+.img1 {
+  margin-left: 0rem;
+  width: 100%;
+  height: 80vh;
+  background-attachment: fixed;
+background-size: cover;
+background-position: center;
+  margin-top: 0rem;
+  filter: brightness(40%);
+}
+
+.img2 {
+  margin-left: 0rem;
+  width: 100%;
+  height: 110vh;
+  margin-top: 0rem;
+  filter: brightness(40%);
+}
+.text-overlay {
+  position: absolute;
+  top: 425%;
+  left: 50%;
+  margin-top: 2rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(252, 246, 246);
+}
+#sub {
+  margin-right: 0rem;
+}
+.text-overlay1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-top: 2rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(252, 246, 246);
+}
+
+.underline {
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+.h01 {
+  font-size: 6rem;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: rgb(252, 186, 186);
+  font-family: "Marck Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#conainer01{
+    margin-bottom: 1rem;
+margin-right: 6rem;
+}
+
+li {
+  border-right: none;
+}
+.list-group {
+    
+  line-height: 1.9rem;
+  border: none;
+  border-right: 1px solid rgb(185, 184, 184);
+}
+#sub:hover {
+  background-color: orange;
+  color: rgb(245, 245, 245) !important;
+}
+
+#scontainer {
+  margin-top: 2rem;
+  width: 100%;
+
+  height: 33vh;
+  padding: 3rem;
+  background-color: rgb(241, 241, 241);
+}
+.label1 {
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(61, 57, 51);
+  background-color: rgb(241, 241, 241);
+}
+
+.inp2 {
+  border: 1px solid rgb(243, 243, 243);
+  width: 100%;
+  text-align: center;
+  color: aliceblue;
+
+  height: 8.5vh;
+}
+#container4{
+  padding: 2rem;
+  width: 100%;
+  background: #f3f3f3;
+}
+
+.price-slider {
+  width: 120%;
+  margin: 50px auto;
+}
+
+@media only screen and (max-width: 600px) {
+  #sign {
+    color: rgb(255, 226, 226) !important;
+    margin-top: -2.5rem;
+  }
+  .h02 {
+    margin-top: -4.6rem;
+    font-family: "Marck Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: rgb(255, 111, 111);
+  }
+  .text-overlay {
+    position: absolute;
+    top: 2125%;
+    left: 50%;
+    margin-top: 2rem;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(252, 246, 246);
+  }
+
+  #sub {
+    margin-right: 0rem;
+    height: 14vh;
+    font-size: 1.2rem;
+  }
+
+  #inputEmail {
+    margin-top: -2rem;
+    margin-left: 0.2rem;
+    height: 14vh !important;
+  }
+
+  #scontainer{
+    height: 60vh;
+    
+  }
+  .inp2{
+    height: 15vh;
+  }
+.inp5{
+  margin-top: 1rem;
+  width: 90% !important;
+}
+}

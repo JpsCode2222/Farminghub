@@ -1,0 +1,38 @@
+<%- include ("nav.ejs") %>
+<form action="/admin/update_blog" method="post" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+                <h3 class="font-weight-bold">Add New Blog</h3>
+
+            </div>
+            <div class="col-md-6">
+                <input value="<%=blogs[0].blog_id%>" type="hidden" name="blog_id">
+               Upload Image 
+                <input value="<%=blogs[0].blog_image%>" type="file" name="blog_image" class="form-control">
+                <img src="/uploads/<%=blogs[0].image%>" alt="" class="w-100">
+            </div>
+            <div class="col-md-6">
+                Details 
+                <input value="<%=blogs[0].blog_details%>" type="text" name="blog_details" class="form-control">
+
+            </div>
+            <div class="col-md-6 mt-3">
+                Name 
+                <input value="<%=blogs[0].blog_name%>" type="text" name="blog_name" class="form-control">
+
+            </div>
+            <div class="col-md-6 mt-3">
+                Date 
+                <input value="<%=blogs[0].blog_date%>" type="date" name="blog_date" class="form-control">
+
+            </div>
+            <div class="col-md-12 mt-3 text-center">
+                <button class="btn btn-primary">Save New Blog</button>
+            </div>
+        </div>
+
+    </div>
+
+</form>
+<%- include ("footer.ejs") %>

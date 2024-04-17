@@ -1,0 +1,95 @@
+<%-include('nav.ejs')%>
+<div class="container-fluid">
+    <form action="/admin/save_service_discription" method="post">
+    <div class="row shadow">
+        <div class="col-md-12">
+            <div class="col-md-12 text-center text-white mb-3" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+                <h3>Service Discription & img</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            Service Main heading
+            <input type="text" name="service_main_heading" id="" class="form-control" value="<%=service_discription[0].service_main_heading%>">
+        </div>
+        <div class="col-md-3">
+            Service Sub heading
+            <input type="text" name="service_sub_heading" id="" class="form-control" value="<%=service_discription[0].service_sub_heading%>">
+        </div>
+        <div class="col-md">
+             Key Point 1
+            <input type="text" name="key_point_1" id="" class="form-control" value="<%=service_discription[0].key_point_1%>">
+        </div>
+        <div class="col-md">
+            Key Point 2
+            <input type="text" name="key_point_2" id="" class="form-control" value="<%=service_discription[0].key_point_2%>">
+        </div>
+        <div class="col-md">
+            Key Point 3
+            <input type="text" name="key_point_3" id="" class="form-control" value="<%=service_discription[0].key_point_3%>">
+        </div>
+        <div class="col-md">
+            Key Point 4
+            <input type="text" name="key_point_4" id="" class="form-control" value="<%=service_discription[0].key_point_4%>">
+        </div>
+        <div class="col-md-12 text-center mt-4 mb-4">
+            <button class="btn btn-primary">Save Service Discription</button>
+        </div>
+    </div>
+</form>
+</div>
+
+
+<div class="col-md-12 mb-2 mt-5">
+    <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+        <h3>Manage Discription & Add photo</h3>
+    </div>
+</div>
+    <div class="container-fluid mt-3">
+<form action="/admin/save_service_images" method="post" enctype="multipart/form-data">
+
+        <div class="row shadow p-2">
+            <div class="col-md-4">
+                Select Image
+                <input type="file" name="Image" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary mt-4">Save Image</button>
+            </div>
+
+        </div>
+</form>
+
+    </div> 
+
+
+    <div class="col-md-12 mb-2 mt-5">
+        <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+            <h3> Discription List</h3>
+        </div>
+    </div>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <table class="table table-hover table-bordered table-responsive">
+                <tr>
+                    <th></th>
+                    <th>Sn</th>
+                    <th>Service Image</th>
+                </tr>
+                <%for(var i=0;i<service_img.length;i++){%>
+                    <tr>
+                        <td>
+                            <a href="/admin/update_service_img/<%=service_img[i].service_img_id%>"><i class="fa fa-edit btn btn-warning"></i></a>
+                            <a href="/admin/delete_service_img/<%=service_img[i].service_img_id%>"><i class="fa fa-trash btn btn-danger"></i></a>
+
+
+                        </td>
+                        <td><%=i+1%></td>
+                        <td>
+                            <img src="/uploads/<%=service_img[i].service_img%>" alt="" width="200px">
+                        </td>
+                    </tr>
+                <%}%>
+            </table>
+        </div>
+    </div>
+<%-include('footer.ejs')%>

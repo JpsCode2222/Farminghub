@@ -1,0 +1,64 @@
+<%-include('nav')%>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center text-white"
+                style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+                <h3>About Us : Section 4</h3>
+            </div>
+            <hr>
+            <div class="col-md-12 mt-3 bg-white p-3 shadow">
+                <% if(list.length < 3){%>
+                    <form action="/admin/save_about_us_sec4" method="post" enctype="multipart/form-data">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 mt-2 mb-3">
+                                Enter Heading <span class="text-danger">*</span>
+                                <input required type="text" class="form-control" name="heading" placeholder="Title">
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Enter Details <span class="text-danger">*</span>
+                                <textarea required class="form-control" name="details" placeholder="Detials"></textarea>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <button class="btn btn-primary mt-4">Save Details</button>
+                            </div>
+                        </div>
+                    </form>
+                    <%}%>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <table class="tbl tbl-striped tbl-animated tbl-hover w-100 m-auto">
+                                    <tr>
+                                        <th>Action</th>
+                                        <th>Sr</th>
+                                        <th>Heading</th>
+                                        <th>Details</th>
+                                    </tr>
+                                    <% for(var i=0;i<list.length;i++){%>
+                                        <tr>
+                                            <td>
+                                                <a href="/admin/edit_about_us_sec4/<%=list[i].id%>" class="p-1"><i
+                                                        class="fa fa-pen-nib text-primary h4"></i></a>
+                                                <a href="/admin/delete_about_us_sec4/<%=list[i].id%>" class="p-1"><i
+                                                        class="fa fa-trash h4 text-danger"></i></a>
+                                            </td>
+                                            <td>
+                                                <%=i+1%></td>
+                                            <td>
+                                                <%=list[i].heading%></td>
+                                            <td class="w-75">
+                                                <%=list[i].details%></td>
+                                        </tr>
+                                        <%}%>
+                                </table>
+                            </div>
+                        </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <%-include('footer')%>

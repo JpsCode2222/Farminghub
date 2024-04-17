@@ -1,0 +1,79 @@
+<%-include('nav')%>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center text-white"
+                style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+                <h3>Section 1</h3>
+            </div>
+            <hr>
+            <% if(!list){ %>
+                <div class="col-md-12 mt-3 bg-white p-3 shadow">
+                    <form action="/admin/save_project_page_sec1" method="post" enctype="multipart/form-data">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 mt-2 mb-3">
+                                Select Banner Image <span class="text-danger">*</span>
+                                <input required class="form-control bg-white" type="file" name="bg_img">
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Enter Heading <span class="text-danger">*</span>
+                                <input required type="text" class="form-control" name="heading"
+                                    placeholder="Enter card_number">
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Button 2 <span class="text-danger">*</span>
+                                <input required type="text" class="form-control" name="btn1" placeholder=" Button 1">
+                            </div>
+                            <div class="col-md-6 mt-2 mb-3">
+                                Button 2 <span class="text-danger">*</span>
+                                <input required type="text" class="form-control" name="btn2" placeholder=" Button 2">
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <button class="btn btn-primary mt-4">Save Details</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <%}%>
+
+                    <% if(list){ %>
+                        <div class="col-md-12 mt-3 bg-white p-3 shadow">
+                            <form action="/admin/update_project_page_sec1" method="post" enctype="multipart/form-data">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-3 mt-2 mb-3">
+                                        Select Banner Image
+                                        <input class="form-control bg-white" type="file" name="bg_img">
+                                    </div>
+                                    <div class="col-md-3 mt-2 mb-3">
+                                        <img src="/uploads/<%=list.bg_img%>" class="h-100 w-100" alt="">
+                                    </div>
+                                    <div class="col-md-6 mt-2 mb-3">
+                                        Enter Heading
+                                        <input type="text" class="form-control" value="<%=list.heading%>" name="heading"
+                                            placeholder="Enter card_number">
+                                        <input type="hidden" name="id" value="<%=list.id%>">
+                                    </div>
+                                    <div class="col-md-6 mt-2 mb-3">
+                                        Button 1
+                                        <input type="text" class="form-control" value="<%=list.btn1%>" name="btn1"
+                                            placeholder=" Button 1">
+                                    </div>
+                                    <div class="col-md-6 mt-2 mb-3">
+                                        Button 2
+                                        <input type="text" class="form-control" value="<%=list.btn2%>" name="btn2"
+                                            placeholder=" Button 2">
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <button class="btn btn-primary mt-4">Update Details</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <%}%>
+
+        </div>
+    </div>
+
+
+
+    <%-include('footer')%>

@@ -1,0 +1,134 @@
+@media(max-width:667px){
+    .f_head{
+        display:none;
+    }
+    .navbar-brand{
+        margin-right: 0px;
+    }
+    .carousel-item .abs_div_slider h1{
+        font-size: 25px;
+        font-family: 'Playfair Display', serif;
+    }
+    .carousel-item .abs_div_slider{
+        left: 18%;
+    }
+    .carousel-item .abs_div_slider p{
+        font-size: 18px;
+
+    }
+    .main_title{
+        font-family: 'Playfair Display', serif;
+        font-weight: bold;
+    }
+    .sub_tittle{
+        font-family: 'Playfair Display', serif;
+        font-family: 'Satisfy', cursive;
+        color: skyblue;
+        font-size: 20px;
+    }
+    .second_nav li{
+        display: inline-block !important;
+        margin-left: 10px;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: black;
+    }
+    .second_nav li a{
+        text-decoration: none;
+        color: black;
+        font-size: 8px !important;
+    }
+    .second_nav{
+        margin-left: -40px;
+    }
+    .btn_mrinfo{
+        height: 50px;
+        width: 200px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        background-color: #E6B59E;
+        margin-top: 13px;
+        margin-left:0px;
+    }
+    .navbar{
+        position: sticky;
+        top: 0px;
+        z-index: 999;
+        padding-top: 10px;
+    }
+    .second_nav li{
+        display: inline-block !important;
+        margin-left: 30px;
+        font-weight: bold;
+        padding: 15px 15px;
+        text-align: center;
+        border-radius: 50px;
+        text-decoration: none;
+        color: black;
+    }
+    .ab_div img{
+        height: 30vh;
+        width: 98%;
+        background-position: center;
+        background-size: cover;
+    }
+    .ab_div1{
+        position: absolute;
+        top: 16%;
+        height: 100%;
+        width: 98%;
+    }
+    .displayy{
+        opacity: 0;
+    }
+    .ab_div{
+        width: 99%;
+    }
+    .testimonial{
+        width: 95%;
+    }
+    .content{
+        display: none;
+    }
+    .test_img{
+        height: 30px !important;
+        width: 50px;
+        margin-left: 36%;
+        display: none;
+    }
+    .our_val{
+        font-size: 36px;
+    }
+    
+    .peopleSay{
+        padding: 0px 0px !important;
+    }
+    .loremm{
+        padding: 0px 50px;
+    }
+    .ab_div{
+        margin-bottom: -130px;
+    }
+    .left_brdr{
+        border: none;
+    }
+    .appointment_first img{
+      height: 30vh;
+      filter: brightness(0.3)
+      opacity(1)
+    }
+    .appointment_second{
+        padding: 5px;
+    }
+    .appointment_second h1{
+        font-size: 18px;
+        margin-top: -30px;
+    }
+    .appointment_second p{
+        font-size: 10px;
+        margin-top: 10px;
+    }
+}

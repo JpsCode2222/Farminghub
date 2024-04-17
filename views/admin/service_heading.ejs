@@ -1,0 +1,21 @@
+<%-include('nav.ejs')%>
+<div class="container-fluid">
+
+<form action="/admin/save_service_heading" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-4">
+            Service Heading
+            <input type="text" name="heading" class="form-control" value="<%=service_heading[0].service_heading%>">
+        </div>
+        <div class="col-md-4">
+            Background Image
+            <input type="file" name="img" class="form-control mb-4">
+            <img src="/uploads/<%=service_heading[0].background_img%>" alt="" width="100%">
+        </div>
+        <div class="col-md-4 mt-4">
+            <button class="btn btn-primary">Save Service Heading Page</button>
+        </div>
+    </div>
+</form>
+</div>
+<%-include('footer.ejs')%>

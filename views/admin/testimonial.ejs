@@ -1,0 +1,65 @@
+<%-include('nav.ejs')%>
+<div class="container-fluid">
+    <div class="col-md-12">
+        <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+            <h3>Edit and Update Testimonial</h3>
+        </div>
+    </div>
+    <form action="/admin/save_testimonial" method="post" enctype="multipart/form-data">
+    <div class="row mt-5 p-5 shadow">
+        <div class="col-md-3">
+            Testimonial User Image*
+            <input type="file" class="form-control" name="user_img" required>
+        </div>
+        <div class="col-md-3">
+            Testimonial Animated Image*
+            <input type="file" class="form-control" name="user_img2" required>
+        </div>
+        <div class="col-md-3">
+            Testimonial Discription*
+            <input type="text" class="form-control" name="disc">
+        </div>
+        <div class="col-md-3">
+            Testimonial User Name*
+            <input type="text" class="form-control" name="user_name">
+        </div>
+        <div class="col-md-3 mt-3">
+            <button class="btn btn-info">Save</button>
+        </div>
+    </div>
+</form>
+</div>
+
+
+<div class="col-md-12 mt-5">
+    <div class="col-md-12 text-center text-white" style="background-image: linear-gradient(	25deg,rgb(132, 62, 148) 15%,rgb(217, 42, 194) 71%,rgb(11, 87, 239) 71%,rgb(8, 86, 243) 74%,rgb(239, 164, 246) 74%,white 95%);">
+        <h3>Testimonial List</h3>
+    </div>
+</div>
+<table class="table table-hover table-responsive table-bordered mt-3">
+<tr>
+    <th></th>
+    <th>Sn</th>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Discription</th>
+    <th>Animate Image</th>
+</tr>
+<%for(var i=0;i<testimonial.length;i++){%>
+<tr>
+    <td>
+        <a href="edit_testimonial/<%=testimonial[i].test_id%>"><button class="btn btn-warning w-100">Edit</button></a>
+        <a href="delete_testimonial/<%=testimonial[i].test_id%>"><button class="btn btn-danger w-100 mt-3">Delete</button></a>
+
+    </td>
+    <td><%=i+1%></td>
+    <td><img src="/uploads/<%=testimonial[i].test_img%>" alt="" class="" style="width: 100px;"></td>
+    <td><%=testimonial[i].test_name%></td>
+    <td><%=testimonial[i].text_disc%></td>
+    <td><img src="/uploads/<%=testimonial[i].anim_img%>" alt="" class="w-100"></td>
+
+
+</tr>
+<%}%>
+</table>
+<%-include('footer.ejs')%>
